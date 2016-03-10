@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/MyDome.iml" filepath="$PROJECT_DIR$/MyDome.iml" />
+      <module fileurl="file://$PROJECT_DIR$/dragSortlibrary/dragSortlibrary.iml" filepath="$PROJECT_DIR$/dragSortlibrary/dragSortlibrary.iml" />
+      <module fileurl="file://$PROJECT_DIR$/myDome/myDome.iml" filepath="$PROJECT_DIR$/myDome/myDome.iml" />
+    </modules>
+  </component>
+</project>
