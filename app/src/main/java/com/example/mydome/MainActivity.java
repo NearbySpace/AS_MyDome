@@ -1,15 +1,11 @@
 package com.example.mydome;
 
+import android.Manifest;
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Intent;
-import android.graphics.Color;
-import android.os.Build.VERSION;
-import android.os.Build.VERSION_CODES;
 import android.os.Bundle;
 import android.view.View;
-import android.view.Window;
-import android.view.WindowManager;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ListView;
@@ -23,6 +19,7 @@ import com.example.mydome.handwriting.HandwritingActivity;
 import com.example.mydome.listView.ListViewClassify;
 import com.example.mydome.mediaPlayer.MediaClassify;
 import com.example.mydome.message.MessageClassify;
+import com.example.mydome.utils.PermissionHelper;
 import com.example.mydome.windowsClassify.WindowsClassify;
 
 public class MainActivity extends Activity implements OnItemClickListener {
@@ -34,8 +31,7 @@ public class MainActivity extends Activity implements OnItemClickListener {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
-		//璁剧疆鐘舵�佹爮涓庨〉闈㈡嫢鏈夊叡鍚岃儗鏅�
-//		if (VERSION.SDK_INT >= VERSION_CODES.LOLLIPOP) {//鐗堟湰澶т簬lollipop锛�5.0锛夋墠鍙互瀹炵幇
+//		if (VERSION.SDK_INT >= VERSION_CODES.LOLLIPOP) {
 //			Window window = getWindow();
 //			window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS
 //					| WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION);
@@ -47,9 +43,10 @@ public class MainActivity extends Activity implements OnItemClickListener {
 //			window.setStatusBarColor(Color.TRANSPARENT);
 //			window.setNavigationBarColor(Color.TRANSPARENT);
 //		}
+		PermissionHelper.requestPermissions(this , Manifest.permission.WRITE_EXTERNAL_STORAGE,
+				Manifest.permission.RECORD_AUDIO);
 		initData();
 		initView();
-
 	}
 	
 	private void initData() {

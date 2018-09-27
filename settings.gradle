@@ -1,2 +1,2 @@
 include ':dragSortlibrary'
-include ':myDome'
+include ':app'

@@ -15,7 +15,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/main_title_item"
         android:textSize="13sp"
-        android:textColor="#AAAAAA"
+        android:textColor="@color/promptTextColor"
         android:text="生成文件夹"/>
     
 
